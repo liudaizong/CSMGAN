@@ -13,7 +13,7 @@ Code for ACM MM2020 paper
 If you use this code please cite:
 
 ```
-@inproceedings{liu2019jointly,
+@inproceedings{liu2020jointly,
     title={Jointly Cross- and Self-Modal Graph Attention Network for Query-Based Moment Localization},
     author={Liu, Daizong and Qu, Xiaoye and Liu, Xiaoyang and Dong, Jianfeng and Zhou, Pan and Xu, Zichuan},
     booktitle={Proceedings of the 28th ACM International Conference on Multimedia (MM’20)},
