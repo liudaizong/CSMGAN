@@ -33,7 +33,7 @@ Code for ACM MM2020 paper
 * Download Pretrained model on [Google Drive](https://drive.google.com/drive/folders/149wIt533qSnrY_rgDaqfufL-Kn58aLw5?usp=sharing)
 
 ### Evaluation
-coming soon
+
 
 ### Citation
 If you use this code please cite:
