@@ -4,7 +4,7 @@ Code for ACM MM2020 paper
 **Jointly Cross- and Self-Modal Graph Attention Network for Query-Based Moment Localization** <br />
 **[[Paper](https://arxiv.org/abs/2008.01403)]** <br />
 
-### Results
+### Main Results
 ##### Activity Caption
 | R@1, IoU=0.3      | R@1, IoU=0.5     | R@1, IoU=0.7      | R@5, IoU=0.3      | R@5, IoU=0.5     | R@5, IoU=0.7      |
 | ---------- | :-----------:  | :-----------: | :-----------:  | :-----------: | :-----------:  |
@@ -22,12 +22,16 @@ Code for ACM MM2020 paper
 | ---------- | :-----------:  | :-----------: | :-----------:  |
 | 29.44     | 19.16    | 70.77     | 41.61     |
 
+### Prerequisites
+* Python 3.6
+* Pytorch >= 0.4.0
+
 ### Preparation
 1. Download Pretrained [[Glove Embeddings](http://nlp.stanford.edu/data/glove.840B.300d.zip)]
 2. Download Extracted Features of [[Activity Caption](http://activity-net.org/challenges/2016/download.html)]
 3. Download Extracted Features of [[TACoS](https://drive.google.com/file/d/1kK_FTo6USmPhO1vam3uvBMtJ3QChUblm/view)]
 
-### Training
+### Evaluation
 coming soon
 
 ### Citation
