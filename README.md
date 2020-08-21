@@ -27,10 +27,10 @@ Code for ACM MM2020 paper
 * Pytorch >= 0.4.0
 
 ### Preparation
-* Download Pretrained Glove [[Embeddings](http://nlp.stanford.edu/data/glove.840B.300d.zip)]
-* Download Extracted Features of [[Activity Caption](http://activity-net.org/challenges/2016/download.html)]
-* Download Extracted Features of [[TACoS](https://drive.google.com/file/d/1kK_FTo6USmPhO1vam3uvBMtJ3QChUblm/view)]
-* Download Pretrained model on [[Google Drive](https://drive.google.com/drive/folders/149wIt533qSnrY_rgDaqfufL-Kn58aLw5?usp=sharing)]
+* Download Pretrained [Glove Embeddings](http://nlp.stanford.edu/data/glove.840B.300d.zip)
+* Download Extracted Features of [Activity Caption](http://activity-net.org/challenges/2016/download.html)
+* Download Extracted Features of [TACoS](https://drive.google.com/file/d/1kK_FTo6USmPhO1vam3uvBMtJ3QChUblm/view)
+* Download Pretrained model on [Google Drive](https://drive.google.com/drive/folders/149wIt533qSnrY_rgDaqfufL-Kn58aLw5?usp=sharing)
 
 ### Evaluation
 coming soon
