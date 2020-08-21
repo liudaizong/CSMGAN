@@ -23,7 +23,7 @@ Code for ACM MM2020 paper
 | 29.44     | 19.16    | 70.77     | 41.61     |
 
 ### Preparation
-1. Download Pretrained Glove [[Embeddings(http://nlp.stanford.edu/data/glove.840B.300d.zip)]]
+1. Download Pretrained [[Glove Embeddings](http://nlp.stanford.edu/data/glove.840B.300d.zip)]
 2. Download Extracted Features of [[Activity Caption](http://activity-net.org/challenges/2016/download.html)]
 3. Download Extracted Features of [[TACoS](https://drive.google.com/file/d/1kK_FTo6USmPhO1vam3uvBMtJ3QChUblm/view)]
 
