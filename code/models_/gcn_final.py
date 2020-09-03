@@ -198,27 +198,27 @@ class Model(nn.Module):
         proposals = torch.from_numpy(self.proposals).type_as(gt).float()  # [max_num_frames, num_anchors, 2]
         proposals = proposals.view(-1, 2)
         if not self.training:
-            ##if train, open this
-            # batch_now = reg.shape[0]
-            # proposals = proposals.expand(batch_now, 800, 2)#1400,800
-            # predict_box = proposals
-            # predict_reg = reg # [nb, 2]
-            # refine_box = predict_box + predict_reg
-            # gt = gt.expand(800, batch_now, 2).transpose(0, 1).contiguous()
-            # reg_loss = self.criterion2(refine_box, gt.float())
-            # loss = cls_loss + 5e-3 * reg_loss #1e-3 5e-3
-            # predict_flatten = (predict.contiguous().view(predict.size(0), -1) * label_mask.float())
-            
-            # if evaluation, open this
-            indices = torch.argmax(predict_flatten, -1)
-            predict_box = proposals[indices]  # [nb, 2]
-            predict_reg = reg[range(reg.size(0)), indices]  # [nb, 2]
+            ##if evaluation, open this
+            batch_now = reg.shape[0]
+            proposals = proposals.expand(batch_now, 800, 2)#1400,800
+            predict_box = proposals
+            predict_reg = reg # [nb, 2]
             refine_box = predict_box + predict_reg
+            gt = gt.expand(800, batch_now, 2).transpose(0, 1).contiguous()
             reg_loss = self.criterion2(refine_box, gt.float())
-            if self.args.dataset == 'TACOS':
-               loss = cls_loss + 5e-3 * reg_loss #1e-3 5e-3
-            else:
-               loss = cls_loss + 1e-3 * reg_loss #1e-3 5e-3
+            loss = cls_loss + 5e-3 * reg_loss #1e-3 5e-3
+            predict_flatten = (predict.contiguous().view(predict.size(0), -1) * label_mask.float())
+            
+            # if train, open this
+            # indices = torch.argmax(predict_flatten, -1)
+            # predict_box = proposals[indices]  # [nb, 2]
+            # predict_reg = reg[range(reg.size(0)), indices]  # [nb, 2]
+            # refine_box = predict_box + predict_reg
+            # reg_loss = self.criterion2(refine_box, gt.float())
+            # if self.args.dataset == 'TACOS':
+            #    loss = cls_loss + 5e-3 * reg_loss #1e-3 5e-3
+            # else:
+            #    loss = cls_loss + 1e-3 * reg_loss #1e-3 5e-3
         else:
             # indices = torch.argmax(label, -1)
             indices = torch.where(adj_mat > 0)
